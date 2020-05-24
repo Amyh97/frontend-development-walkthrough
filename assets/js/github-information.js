@@ -28,6 +28,8 @@ function reopInformationHTML(repos) {
 }
 
 function fetchGitHubInformation(event) {
+    $("#gh-user-data").html("");
+    $("#gh-reop-data").html("");
     var username = $("#gh-username").val();
     if(!username) {
     $("#gh-user-data").html(`<h2>Please enter GitHUb Username.</h2>`);
@@ -52,3 +54,5 @@ function fetchGitHubInformation(event) {
         }
     })
 }
+
+$(document).ready(fetchGitHubInformation);
